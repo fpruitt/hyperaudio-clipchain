@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+<title>Hyperaudio</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/hyperaudio.player.css">
+<link rel="stylesheet" type="text/css" href="css/player.fix.css">
+<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+<div id="wrapper">
+	<header id="header">
+        <!--this is calling the alt1 class that is based off the normal h1, but is a little different in style-->
+        <h1 class="alt1">ClipChain</h1>
+
+		<h1><form id="mix-title-form"><input type="text" value="Untitled Mix - click to edit" id="mix-title" onfocus="if(this.value=='Untitled Mix - click to edit')this.value='Untitled Mix'"></input></form></h1>
+		<div id="save-button">6</div>
+		<div id="save-button-saving"></div>
+
+
+	</header>
+
+    
+
+	<div id="video-source" class="video"></div>
+<!-- 
+       If the defaultTranscriptId variable from the top of the \src\hap.js file is not specified or is null,
+       then the following section between the <div id="transcript"> and </div> tag will display whatever is typed 
+       onto the left-hand transcript box on ClipChain
+-->
+	<div id="transcript">
+        <div align="center"><p><b>Welcome to ClipChain!</b></p>
+		<p><i>Enter your search text here then press the Search button below. Words will strike out when not found.</i></p></div>
+	</div>
+
+	<div id="stage-videos" class="video">
+<!--
+		These divs need to be added by the projector so they are in the correct place in the structure.
+		Also the z-index of these are over the Projector GUI atm, so just removing for time being.
+		<div id="fxHelper" class="video-transition-servo"></div>
+		<div id="titleFXHelper" class="title-effect-servo"></div>
+-->
+	</div>
+
+	<div id="stage"></div>
+
+	<div id="sidemenu">
+		<div id="sidemenu-handle" class="icon-menu"></div>
+		<ul class="tabbar">
+			<li id="sidemenu-media" class="selected"><span class="icon-video">Video</span></li>
+			<li id="sidemenu-bgm"><span class="icon-music">BGM</span></li>
+		</ul>
+
+        <ul class="panel selected" id="panel-media">
+
+            <li class="folder">
+
+                <div>Test</div>
+                <ul>
+                    <li data-source="clapper-responds">Clapper responds</li>
+                    <li data-source="sen-feinstein-1212">Sen. Feinstein</li>
+                </ul>
+            </li>
+
+
+        </ul>
+
+		<ul class="panel selected" id="panel-media">
+<!--
+			<li class="folder"><div>Directory</div>
+				<ul>
+					<li data-source="clapper-responds">Clapper responds</li>
+					<li data-source="sen-feinstein-1212">Sen. Feinstein</li>
+				</ul>
+			</li>
+-->
+
+            <li class="folder">
+                
+                <div>Show Selected Media</div>
+                <ul>
+                    <li data-source="clapper-responds">Clapper responds</li>
+                    <li data-source="sen-feinstein-1212">Sen. Feinstein</li>
+                </ul>
+            </li>
+<!--       
+    		<li data-source="clapper-responds">Clapper responds</li>
+            <li data-source="sen-feinstein-1212">Sen. Feinstein</li>
+-->
+
+		</ul>
+		<ul class="panel" id="panel-bgm">
+<!--
+			<li class="folder"><div>Other Music</div>
+				<ul>
+					<li
+						data-id="123456"
+						data-mp3="http://www.jplayer.org/audio/mp3/Miaow-07-Bubble.mp3"
+						data-ogg="http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg">
+						Miaow - Bubble
+					</li>
+					<li
+						data-id="789012"
+						data-mp3="http://www.jplayer.org/audio/mp3/Miaow-04-Lismore.mp3"
+						data-ogg="http://www.jplayer.org/audio/ogg/Miaow-04-Lismore.ogg">
+						Miaow - Lismore
+					</li>
+				</ul>
+			</li>
+-->
+		</ul>
+	</div>
+
+	<footer id="footer">
+
+		<ul id="transcript-options">
+            <li id="clearFX">Clear</li>
+            <li id="searchFX">Search</li>
+		</ul>
+		<ul id="effects">
+			<li id="fadeFX">Fade</li>
+			<li id="trimFX">Trim</li>
+			<li id="titleFX">Title</li>
+		</ul>
+	</footer>
+</div>
+<div id="signin-modal" class="modal">
+	<div class="modal-mask"></div>
+	<div class="modal-window">
+		<div class="modal-header">
+			Sign In
+		</div>
+		<div class="modal-close">
+			g
+		</div>
+		<form id="signin-form">
+			<div class="modal-input">
+				<label for="username">Username</label>
+				<input type="text" name="username" id="username" placeholder="Username">
+			</div>
+			<div class="modal-input">
+				<label for="password">Password</label>
+				<input type="password" name="password" id="password" placeholder="Password">
+			</div>
+			<div class="modal-input">
+				<input type="submit" id="signin" value="Sign In">
+			</div>
+		</form>
+	</div>
+</div>
+<div id="music-player"></div>
+
+<!-- <script type="text/javascript" src="build/hyperaudio-pad.js"></script> -->
+<script type="text/javascript" src="dist/hyperaudio-pad.min.js"></script>
+<script type="text/javascript">
+HAP.init();
+</script>
+
+</body>
+</html>

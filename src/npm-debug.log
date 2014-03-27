@@ -1,0 +1,217 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@1.3.24
+3 info using node@v0.10.25
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 verbose readDependencies using package.json deps
+6 verbose install where, deps [ 'C:\\xampp\\htdocs\\clipchain',
+6 verbose install   [ 'hyperaudio',
+6 verbose install     'grunt',
+6 verbose install     'grunt-contrib-concat',
+6 verbose install     'grunt-contrib-jshint',
+6 verbose install     'grunt-contrib-uglify' ] ]
+7 info preinstall hyperaudio-pad@0.4.0
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'hyperaudio@git://github.com/hyperaudio-dev/hyperaudio.git#master',
+9 verbose cache add   null ]
+10 verbose cache add name=undefined spec="hyperaudio@git://github.com/hyperaudio-dev/hyperaudio.git#master" args=["hyperaudio@git://github.com/hyperaudio-dev/hyperaudio.git#master",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: '#master',
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'hyperaudio@git://github.com/hyperaudio-dev/hyperaudio.git',
+11 verbose parsed url   path: 'hyperaudio@git://github.com/hyperaudio-dev/hyperaudio.git',
+11 verbose parsed url   href: 'hyperaudio@git://github.com/hyperaudio-dev/hyperaudio.git#master' }
+12 verbose cache add name="hyperaudio" spec="git://github.com/hyperaudio-dev/hyperaudio.git#master" args=["hyperaudio","git://github.com/hyperaudio-dev/hyperaudio.git#master"]
+13 verbose parsed url { protocol: 'git:',
+13 verbose parsed url   slashes: true,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: 'github.com',
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: 'github.com',
+13 verbose parsed url   hash: '#master',
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: '/hyperaudio-dev/hyperaudio.git',
+13 verbose parsed url   path: '/hyperaudio-dev/hyperaudio.git',
+13 verbose parsed url   href: 'git://github.com/hyperaudio-dev/hyperaudio.git#master' }
+14 verbose cache add [ 'grunt@~0.4.1', null ]
+15 verbose cache add name=undefined spec="grunt@~0.4.1" args=["grunt@~0.4.1",null]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: 'grunt@~0.4.1',
+16 verbose parsed url   path: 'grunt@~0.4.1',
+16 verbose parsed url   href: 'grunt@~0.4.1' }
+17 verbose cache add name="grunt" spec="~0.4.1" args=["grunt","~0.4.1"]
+18 verbose parsed url { protocol: null,
+18 verbose parsed url   slashes: null,
+18 verbose parsed url   auth: null,
+18 verbose parsed url   host: null,
+18 verbose parsed url   port: null,
+18 verbose parsed url   hostname: null,
+18 verbose parsed url   hash: null,
+18 verbose parsed url   search: null,
+18 verbose parsed url   query: null,
+18 verbose parsed url   pathname: '~0.4.1',
+18 verbose parsed url   path: '~0.4.1',
+18 verbose parsed url   href: '~0.4.1' }
+19 verbose addNamed [ 'grunt', '~0.4.1' ]
+20 verbose addNamed [ null, '>=0.4.1-0 <0.5.0-0' ]
+21 verbose cache add [ 'grunt-contrib-concat@~0.3.0', null ]
+22 verbose cache add name=undefined spec="grunt-contrib-concat@~0.3.0" args=["grunt-contrib-concat@~0.3.0",null]
+23 verbose parsed url { protocol: null,
+23 verbose parsed url   slashes: null,
+23 verbose parsed url   auth: null,
+23 verbose parsed url   host: null,
+23 verbose parsed url   port: null,
+23 verbose parsed url   hostname: null,
+23 verbose parsed url   hash: null,
+23 verbose parsed url   search: null,
+23 verbose parsed url   query: null,
+23 verbose parsed url   pathname: 'grunt-contrib-concat@~0.3.0',
+23 verbose parsed url   path: 'grunt-contrib-concat@~0.3.0',
+23 verbose parsed url   href: 'grunt-contrib-concat@~0.3.0' }
+24 verbose cache add name="grunt-contrib-concat" spec="~0.3.0" args=["grunt-contrib-concat","~0.3.0"]
+25 verbose parsed url { protocol: null,
+25 verbose parsed url   slashes: null,
+25 verbose parsed url   auth: null,
+25 verbose parsed url   host: null,
+25 verbose parsed url   port: null,
+25 verbose parsed url   hostname: null,
+25 verbose parsed url   hash: null,
+25 verbose parsed url   search: null,
+25 verbose parsed url   query: null,
+25 verbose parsed url   pathname: '~0.3.0',
+25 verbose parsed url   path: '~0.3.0',
+25 verbose parsed url   href: '~0.3.0' }
+26 verbose addNamed [ 'grunt-contrib-concat', '~0.3.0' ]
+27 verbose addNamed [ null, '>=0.3.0-0 <0.4.0-0' ]
+28 verbose cache add [ 'grunt-contrib-jshint@~0.6.4', null ]
+29 verbose cache add name=undefined spec="grunt-contrib-jshint@~0.6.4" args=["grunt-contrib-jshint@~0.6.4",null]
+30 verbose parsed url { protocol: null,
+30 verbose parsed url   slashes: null,
+30 verbose parsed url   auth: null,
+30 verbose parsed url   host: null,
+30 verbose parsed url   port: null,
+30 verbose parsed url   hostname: null,
+30 verbose parsed url   hash: null,
+30 verbose parsed url   search: null,
+30 verbose parsed url   query: null,
+30 verbose parsed url   pathname: 'grunt-contrib-jshint@~0.6.4',
+30 verbose parsed url   path: 'grunt-contrib-jshint@~0.6.4',
+30 verbose parsed url   href: 'grunt-contrib-jshint@~0.6.4' }
+31 verbose cache add name="grunt-contrib-jshint" spec="~0.6.4" args=["grunt-contrib-jshint","~0.6.4"]
+32 verbose parsed url { protocol: null,
+32 verbose parsed url   slashes: null,
+32 verbose parsed url   auth: null,
+32 verbose parsed url   host: null,
+32 verbose parsed url   port: null,
+32 verbose parsed url   hostname: null,
+32 verbose parsed url   hash: null,
+32 verbose parsed url   search: null,
+32 verbose parsed url   query: null,
+32 verbose parsed url   pathname: '~0.6.4',
+32 verbose parsed url   path: '~0.6.4',
+32 verbose parsed url   href: '~0.6.4' }
+33 verbose addNamed [ 'grunt-contrib-jshint', '~0.6.4' ]
+34 verbose addNamed [ null, '>=0.6.4-0 <0.7.0-0' ]
+35 verbose cache add [ 'grunt-contrib-uglify@~0.2.4', null ]
+36 verbose cache add name=undefined spec="grunt-contrib-uglify@~0.2.4" args=["grunt-contrib-uglify@~0.2.4",null]
+37 verbose parsed url { protocol: null,
+37 verbose parsed url   slashes: null,
+37 verbose parsed url   auth: null,
+37 verbose parsed url   host: null,
+37 verbose parsed url   port: null,
+37 verbose parsed url   hostname: null,
+37 verbose parsed url   hash: null,
+37 verbose parsed url   search: null,
+37 verbose parsed url   query: null,
+37 verbose parsed url   pathname: 'grunt-contrib-uglify@~0.2.4',
+37 verbose parsed url   path: 'grunt-contrib-uglify@~0.2.4',
+37 verbose parsed url   href: 'grunt-contrib-uglify@~0.2.4' }
+38 verbose cache add name="grunt-contrib-uglify" spec="~0.2.4" args=["grunt-contrib-uglify","~0.2.4"]
+39 verbose parsed url { protocol: null,
+39 verbose parsed url   slashes: null,
+39 verbose parsed url   auth: null,
+39 verbose parsed url   host: null,
+39 verbose parsed url   port: null,
+39 verbose parsed url   hostname: null,
+39 verbose parsed url   hash: null,
+39 verbose parsed url   search: null,
+39 verbose parsed url   query: null,
+39 verbose parsed url   pathname: '~0.2.4',
+39 verbose parsed url   path: '~0.2.4',
+39 verbose parsed url   href: '~0.2.4' }
+40 verbose addNamed [ 'grunt-contrib-uglify', '~0.2.4' ]
+41 verbose addNamed [ null, '>=0.2.4-0 <0.3.0-0' ]
+42 silly lockFile 485c1409-raudio-dev-hyperaudio-git-master git://github.com/hyperaudio-dev/hyperaudio.git#master
+43 verbose lock git://github.com/hyperaudio-dev/hyperaudio.git#master C:\Users\Nater\AppData\Roaming\npm-cache\485c1409-raudio-dev-hyperaudio-git-master.lock
+44 silly lockFile 766a3bd3-grunt-0-4-1 grunt@~0.4.1
+45 verbose lock grunt@~0.4.1 C:\Users\Nater\AppData\Roaming\npm-cache\766a3bd3-grunt-0-4-1.lock
+46 silly lockFile 0e44e68e-grunt-contrib-concat-0-3-0 grunt-contrib-concat@~0.3.0
+47 verbose lock grunt-contrib-concat@~0.3.0 C:\Users\Nater\AppData\Roaming\npm-cache\0e44e68e-grunt-contrib-concat-0-3-0.lock
+48 silly lockFile cd9f4e50-grunt-contrib-jshint-0-6-4 grunt-contrib-jshint@~0.6.4
+49 verbose lock grunt-contrib-jshint@~0.6.4 C:\Users\Nater\AppData\Roaming\npm-cache\cd9f4e50-grunt-contrib-jshint-0-6-4.lock
+50 silly lockFile dcf05dfd-grunt-contrib-uglify-0-2-4 grunt-contrib-uglify@~0.2.4
+51 verbose lock grunt-contrib-uglify@~0.2.4 C:\Users\Nater\AppData\Roaming\npm-cache\dcf05dfd-grunt-contrib-uglify-0-2-4.lock
+52 silly addNameRange { name: 'grunt', range: '>=0.4.1-0 <0.5.0-0', hasData: false }
+53 silly addNameRange { name: 'grunt-contrib-jshint',
+53 silly addNameRange   range: '>=0.6.4-0 <0.7.0-0',
+53 silly addNameRange   hasData: false }
+54 silly addNameRange { name: 'grunt-contrib-concat',
+54 silly addNameRange   range: '>=0.3.0-0 <0.4.0-0',
+54 silly addNameRange   hasData: false }
+55 silly addNameRange { name: 'grunt-contrib-uglify',
+55 silly addNameRange   range: '>=0.2.4-0 <0.3.0-0',
+55 silly addNameRange   hasData: false }
+56 verbose url raw grunt-contrib-uglify
+57 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-uglify' ]
+58 verbose url resolved https://registry.npmjs.org/grunt-contrib-uglify
+59 info trying registry request attempt 1 at 15:58:45
+60 verbose etag "18HD4JOPIOXV9FFAPYQ03D77"
+61 http GET https://registry.npmjs.org/grunt-contrib-uglify
+62 verbose url raw grunt-contrib-jshint
+63 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-jshint' ]
+64 verbose url resolved https://registry.npmjs.org/grunt-contrib-jshint
+65 info trying registry request attempt 1 at 15:58:45
+66 verbose etag "CPBWAN4ZF3VGAG5MCSX0E4XT0"
+67 http GET https://registry.npmjs.org/grunt-contrib-jshint
+68 verbose url raw grunt-contrib-concat
+69 verbose url resolving [ 'https://registry.npmjs.org/', './grunt-contrib-concat' ]
+70 verbose url resolved https://registry.npmjs.org/grunt-contrib-concat
+71 info trying registry request attempt 1 at 15:58:45
+72 verbose etag "35BO568CAGMW5T99XNCAE53KX"
+73 http GET https://registry.npmjs.org/grunt-contrib-concat
+74 verbose url raw grunt
+75 verbose url resolving [ 'https://registry.npmjs.org/', './grunt' ]
+76 verbose url resolved https://registry.npmjs.org/grunt
+77 info trying registry request attempt 1 at 15:58:45
+78 verbose etag "3C185Y9Z1L7MCW832AXRVI29Y"
+79 http GET https://registry.npmjs.org/grunt
+80 verbose addRemoteGit [ 'git://github.com/hyperaudio-dev/hyperaudio.git', 'master' ]
+81 silly lockFile b984bc3f-om-hyperaudio-dev-hyperaudio-git git://github.com/hyperaudio-dev/hyperaudio.git
+82 error not found: git
+83 error Failed using git.
+83 error This is most likely not a problem with npm itself.
+83 error Please check if you have git installed and in your PATH.
+84 error System Windows_NT 6.1.7601
+85 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+86 error cwd C:\xampp\htdocs\clipchain\src
+87 error node -v v0.10.25
+88 error npm -v 1.3.24
+89 error code ENOGIT
+90 verbose exit [ 1, true ]

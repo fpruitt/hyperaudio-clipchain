@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Player demo</title>
+	<link rel="stylesheet" type="text/css" href="../src/css/hyperaudio.player.css" />
+	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<style>
+/* Usually the page CSS will position the player div with position:absolute;
+ * Here we need to use relative (or absolute) so that the children's CSS aligns correctly.
+ */
+.player-on-page {
+	position: relative;
+}
+
+</style>
+</head>
+<body>
+
+<div id="test-video-1" class="player-on-page"></div>
+
+<div id="test-video-2" class="player-on-page"></div>
+
+<div id="test-video-3" class="player-on-page"></div>
+
+<script type="text/javascript" src="../lib/popcorn.js"></script>
+<script type="text/javascript" src="../lib/popcorn._MediaElementProto.js"></script>
+<script type="text/javascript" src="../lib/popcorn.HTMLYouTubeVideoElement.js"></script>
+<script type="text/javascript" src="../src/js/hyperaudio.core.js"></script>
+<script type="text/javascript" src="../src/js/hyperaudio.player.gui.js"></script>
+<script type="text/javascript" src="../src/js/hyperaudio.player.js"></script>
+<script type="text/javascript">
+
+	hyperaudio.register('Player', Player);
+	hyperaudio.register('PlayerGUI', PlayerGUI);
+
+	var player = [];
+
+	player[0] = hyperaudio.Player({
+		target: "#test-video-1",
+		media: {
+			mp4: "http://hyperaud.io/video/internetindians.mp4",
+			webm: "http://hyperaud.io/video/internetindians.webm"
+		},
+		gui: {
+			fullscreen: true
+		}
+	});
+
+	player[1] = hyperaudio.Player({
+		target: "#test-video-2",
+		media: {
+			youtube: "http://www.youtube.com/watch?v=etaCHoeJXCI"
+		},
+		gui: {
+			fullscreen: true
+		}
+	});
+
+	player[2] = hyperaudio.Player({
+		target: "#test-video-3",
+		media: {
+			mp4: "http://hyperaud.io/video/obama-responds.mp4",
+			webm: "http://hyperaud.io/video/obama-responds.webm"
+		},
+		gui: {
+			fullscreen: true
+		}
+	});
+
+	// A simple tester. Issue commands via console. EG., test.setMedia(1,3);
+	var test = {
+		media: [{
+			mp4: "http://hyperaud.io/video/internetindians.mp4",
+			webm: "http://hyperaud.io/video/internetindians.webm"
+		}, {
+			youtube: "http://www.youtube.com/watch?v=etaCHoeJXCI" // obama-responds
+		}, {
+			mp4: "http://hyperaud.io/video/obama-responds.mp4",
+			webm: "http://hyperaud.io/video/obama-responds.webm"
+		}, {
+			youtube: "http://www.youtube.com/watch?v=Jkb5FKlETqY" // clapper-responds
+		}, {
+			mp4: "http://hyperaud.io/video/clapper-responds.mp4",
+			webm: "http://hyperaud.io/video/clapper-responds.webm"
+		}],
+		setMedia: function(p, m) {
+			if(p < player.length && m < this.media.length) {
+				player[p].load(this.media[m]);
+			} else {
+				console.log('test.setMedia: Parameters out of bounds');
+			}
+		},
+		show: function(p) {
+			if(p < player.length) {
+				player[p].show();
+			} else {
+				console.log('test.show: Parameter out of bounds');
+			}
+		},
+		hide: function(p) {
+			if(p < player.length) {
+				player[p].hide();
+			} else {
+				console.log('test.hide: Parameter out of bounds');
+			}
+		},
+		handler: function(event) {
+			console.log(Date.now() + ': event=%o', event);
+			console.log(Date.now() + ': this=%o', this);
+			console.log(Date.now() + ': event.target=%o', event.target);
+			console.log(Date.now() + ': event.detail=%o', event.detail);
+			console.log(Date.now() + ': this.currentTime=' + this.currentTime);
+			console.log(Date.now() + ': event.target.currentTime=' + event.target.currentTime);
+		},
+		add: function(p) {
+			this.handlers = player[p].addEventListener('timeupdate', this.handler);
+		},
+		remove: function(p) {
+			player[p].removeEventListener('timeupdate', this.handlers);
+		}
+	};
+
+</script>
+
+</body>
+</html>
