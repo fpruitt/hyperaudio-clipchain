@@ -166,6 +166,20 @@ HAP.init = (function (window, document) {
         }, false);
 
 
+        //I know this is bad, but until I figure out where this should go...
+        //Search code goes here!
+        searchButton._tap = new HA.Tap({ el: '#searchFX' });
+        searchButton.addEventListener('tap', function () {
+            var form = document.getElementById(videoSelect);
+            var transcriptsToGet = new Array();
+            for (var i = 0; i < form.length; i++) {
+                if (form.elements[i].type == 'checkbox' && form.element[i].checked == true) {
+                    transcriptsToGet.push(form.elements[i].value);
+                    console.log(form.elements[i].value);
+                }
+            }
+
+        });
 
         fade = new HA.DragDrop({
             handle: '#fadeFX',

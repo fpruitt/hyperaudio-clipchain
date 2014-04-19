@@ -10,6 +10,8 @@
 <link rel="stylesheet" type="text/css" href="css/hyperaudio.player.css">
 <link rel="stylesheet" type="text/css" href="css/player.fix.css">
 <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+<script src="search.js"></script>
+    <script src="json_sans_eval.js"></script>
 </head>
 
 <body>
@@ -35,8 +37,12 @@
        onto the left-hand transcript box on ClipChain
 -->
 	<div id="transcript">
-        <div align="center"><p><b>Welcome to ClipChain!</b></p>
-		<p><i>Enter your search text here then press the Search button below. Words will strike out when not found.</i></p></div>
+        <div>
+        <p align ="center"><b>Welcome to ClipChain!</b></p>
+		<form><input type=search id="search" value="Enter your search text here then press the Search button below. Words will strike out when not found." onblur="if (this.value == '') { this.value = 'Enter your search text here then press the Search button below. Words will strike out when not found.'; }"
+       onfocus="if (this.value == 'Enter your search text here then press the Search button below. Words will strike out when not found.') { this.value = ''; }" />
+        </form>
+        </div>
 	</div>
 
 	<div id="stage-videos" class="video">
@@ -48,7 +54,39 @@
 -->
 	</div>
 
-	<div id="stage"></div>
+	<div id="stage">
+
+        <script type="text/javascript">
+            var results = "";
+            var ht = {
+                init: function () {
+                    this.music = HA.Music({
+                        target: "#music-player"
+                    });
+                    this.projector = HA.Projector({
+                        target: "#target-video",
+                        music: this.music
+                    });
+                    this.stage = HA.Stage({
+                        target: "#target-stage",
+                        mix: {
+                            content: results, // See: mix/example-mix.js
+                            title: "An Example Mix",
+                            desc: "To demonstrate the use of the mix content option with the Stage.",
+                            type: "html"
+                        },
+                        projector: this.projector
+                    });
+                    // this.hint();
+                }
+            }
+
+            window.onload = function () {
+                ht.init();
+            }
+        </script>
+
+    </div>
 
 	<div id="sidemenu">
 		<div id="sidemenu-handle" class="icon-menu"></div>
@@ -116,12 +154,11 @@
 -->
 		</ul>
 	</div>
-
+    <div id="hiddenText"><h3></h3></div>
 	<footer id="footer">
-
 		<ul id="transcript-options">
-            <li id="clearFX">Clear</li>
-            <li id="searchFX">Search</li>
+            <li id="clearFX" onclick="clearText()">Clear</li>
+            <li id="searchFX" onclick="findString2()">Search</li>
 		</ul>
 		<ul id="effects">
 			<li id="fadeFX">Fade</li>
@@ -137,7 +174,6 @@
 			Sign In
 		</div>
 		<div class="modal-close">
-			g
 		</div>
 		<form id="signin-form">
 			<div class="modal-input">
@@ -156,8 +192,8 @@
 </div>
 <div id="music-player"></div>
 
-<!-- <script type="text/javascript" src="build/hyperaudio-pad.js"></script> -->
-<script type="text/javascript" src="dist/hyperaudio-pad.min.js"></script>
+<script type="text/javascript" src="build/hyperaudio-pad.js"></script>
+<!--<script type="text/javascript" src="dist/hyperaudio-pad.min.js"></script>-->
 <script type="text/javascript">
 HAP.init();
 </script>
